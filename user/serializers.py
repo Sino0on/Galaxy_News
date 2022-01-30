@@ -13,6 +13,18 @@ class PostSerializers(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class CategorySerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = '__all__'
+
+
+class TegsSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Tegs
+        fields = '__all__'
+
+
 class PostListSerializers(serializers.ModelSerializer):
 
     class Meta:

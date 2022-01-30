@@ -19,6 +19,17 @@ class PostCreateView(generics.CreateAPIView):
     permission_classes = (IsAuthenticated, )
 
 
+class CategoryCreateView(generics.CreateAPIView):
+    serializer_class = CategorySerializers
+    permission_classes = (IsAuthenticated, )
+
+
+class TegsCreateView(generics.CreateAPIView):
+    serializer_class = TegsSerializers
+    permission_classes = (IsAuthenticated, )
+
+
+
 class PostListView(generics.ListAPIView):
     serializer_class = PostListSerializers
     queryset = Post.objects.all()
